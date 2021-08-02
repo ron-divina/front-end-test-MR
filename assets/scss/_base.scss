@@ -1,0 +1,110 @@
+// Reset
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    text-size-adjust: none;
+}
+
+footer, header, nav, section, main{
+    display: block;
+}
+
+body{
+    line-height: 1;
+}
+
+ol, ul{
+    list-style: none;
+}
+
+blockquote, q{
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after{
+    content: '';
+    content: none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+input{
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+img {
+    width: 100%;
+}
+
+// Variables
+$headerBackground: #F6F6F7;
+$Helvetica: Helvetica, Arial, sans-serif;
+$fontColor0: #222222;
+$fontColor1: #888888;
+$starColor: #c90000;
+$borderLightGrey: #cccccc;
+$borderDarkGrey: #222222;
+
+// Header
+.header {
+    width: 90%;
+    height: 35px;
+    margin: 16px auto;
+    padding: 5px;
+    position: relative;
+    background-color: $headerBackground;
+    color: $fontColor1;
+    font-family: $Helvetica;
+    font-size: 12px;
+}
+
+.product {
+    display: flex;
+    justify-content: center;
+    margin-top: 42px;
+    font-family: $Helvetica;
+
+    &__image {
+        max-width: 400px;
+    }
+
+    &__details {
+        width: 35%;
+        margin-left: 100px;
+    }
+
+    &__title {
+        color: $fontColor0;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+    &__price { 
+        border-top: 1px solid rgba($borderLightGrey, 0.4);
+        border-bottom: 1px solid rgba($borderLightGrey, 0.4);
+        margin-top: 22px;
+        padding: 10px 0;
+        font-weight: 700;
+    }
+
+    &__desc {
+        margin-top: 22px;
+        color: $fontColor1;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
