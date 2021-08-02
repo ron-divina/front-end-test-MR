@@ -100,6 +100,9 @@ img {
   font-size: 14px;
   line-height: 1.7;
 }
+.product__variant {
+  margin-top: 30px;
+}
 
 .cart {
   display: -webkit-box;
@@ -110,5 +113,69 @@ img {
   right: 10%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.size {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.size__title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #888888;
+}
+.size__star {
+  color: #c90000;
+  font-weight: bold;
+}
+.size__sizes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 15px;
+  margin-left: -7px;
+}
+.size__selected {
+  margin-left: 6px;
+  font-weight: 700;
+  color: #000;
+}
+.size__btn.selected + label {
+  outline: 3px solid #000;
+}
+.size__btn + label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 18px;
+  outline: 1px solid #cccccc;
+  color: #888888;
+  cursor: pointer;
+}
+.size__submit {
+  margin-top: 22px;
+  display: block;
+  width: 100%;
+  max-width: 145px;
+  padding: 8px;
+  border: 3px solid #000;
+  background-color: #fff;
+  color: #222222;
+  font-weight: 700;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  cursor: pointer;
+}
+.size__submit:hover {
+  background-color: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
