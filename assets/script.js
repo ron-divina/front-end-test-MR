@@ -15,3 +15,18 @@ function removeSelectedClasses() {
         btn.classList.remove('selected')
     })
 }
+
+// Cart popper show / hide
+const cart = document.querySelector('.cart')
+cart.addEventListener('click', e => {
+    cart.classList.toggle('expanded')
+})
+
+// Get size from user
+function submitAnswers() {
+    const size = document.forms['size']['sz'].value
+    console.log(size)
+
+
+    return false
+}

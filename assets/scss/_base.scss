@@ -58,6 +58,14 @@ $fontColor1: #888888;
 $starColor: #c90000;
 $borderLightGrey: #cccccc;
 $borderDarkGrey: #222222;
+$mobileBP: 764px;
+
+// Media query
+@mixin mobile($maxW: $mobileBP) {
+    @media screen and (max-width: $maxW) {
+      @content;
+    }
+}
 
 // Header
 .header {
@@ -70,6 +78,10 @@ $borderDarkGrey: #222222;
     color: $fontColor1;
     font-family: $Helvetica;
     font-size: 12px;
+
+    @include mobile {
+        width: 100%;
+    }
 }
 
 .product {
@@ -78,13 +90,29 @@ $borderDarkGrey: #222222;
     margin-top: 42px;
     font-family: $Helvetica;
 
+    @include mobile {
+        padding: 0 20px;
+        flex-direction: column;
+    }
+
     &__image {
         max-width: 400px;
+        
+        @include mobile {
+            margin: auto;
+        }
     }
 
     &__details {
         width: 35%;
         margin-left: 100px;
+
+        @include mobile {
+            width: 100%;
+            margin-top: 30px;
+            margin-left: 0;
+            padding-bottom: 30px;
+        }
     }
 
     &__title {

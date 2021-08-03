@@ -4,6 +4,62 @@
     top: 50%;
     right: 10%;
     transform: translateY(-50%);
+    cursor: pointer;
+
+    &__popper {
+        display: none;
+        width: 325px;
+        padding: 20px;
+        border: 1px solid $borderLightGrey;
+        position: absolute;
+        top: 23px;
+        right: -10px;
+        background-color: #fff;
+        color: $fontColor0;
+        font-size: 14px;
+        z-index: -1;
+
+        &::after {
+            content: '';
+            display: none;
+            width: 80px;
+            height: 36px;
+            border-top: 1px solid $borderLightGrey;
+            border-left: 1px solid $borderLightGrey;
+            border-right: 1px solid $borderLightGrey;
+            position: absolute;
+            top: -36px;
+            right: -1px;
+            background-color: #fff;
+            z-index: -1;
+        }
+    }
+
+    &.expanded &__popper, &.expanded &__popper::after {
+        display: block;
+    }
+
+    &__product {
+        display: flex;
+    }
+
+    &__product-image {
+        max-width: 70px;
+        margin-right: 15px;
+    }
+
+    &__product-price {
+        font-weight: 700;
+    }
+
+    &__digits {
+        margin-top: 10px;
+    }
+
+    &__product-size {
+        margin-top: 20px;
+        font-size: 12px;
+    }
 }
 
 .size {
