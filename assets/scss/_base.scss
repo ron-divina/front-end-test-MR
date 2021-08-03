@@ -67,6 +67,21 @@ $mobileBP: 764px;
     }
 }
 
+// Utilities 
+.desktop-only {
+    display: block;
+    @include mobile {
+        display: none;
+    }
+}
+
+.mobile-only {
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+
 // Header
 .header {
     width: 90%;
@@ -88,6 +103,7 @@ $mobileBP: 764px;
     display: flex;
     justify-content: center;
     margin-top: 42px;
+    position: relative;
     font-family: $Helvetica;
 
     @include mobile {
@@ -138,5 +154,11 @@ $mobileBP: 764px;
 
     &__variant {
         margin-top: 30px;
+    }
+
+    &__warning {
+        display: none;
+        margin-top: 10px;
+        color: red;
     }
 }

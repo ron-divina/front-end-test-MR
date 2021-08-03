@@ -5,6 +5,13 @@
     right: 10%;
     transform: translateY(-50%);
     cursor: pointer;
+    z-index: 1;
+
+    &__logo {
+        width: 12px;
+        height: 12px;
+        fill: $fontColor1;
+    }
 
     &__popper {
         display: none;
@@ -17,7 +24,10 @@
         background-color: #fff;
         color: $fontColor0;
         font-size: 14px;
-        z-index: -1;
+
+        @include mobile($maxW: 320px) {
+            width: 280px;
+        }
 
         &::after {
             content: '';
@@ -31,7 +41,6 @@
             top: -36px;
             right: -1px;
             background-color: #fff;
-            z-index: -1;
         }
     }
 
@@ -39,8 +48,17 @@
         display: block;
     }
 
+    &.expanded &__object, &.expanded &__quantity {
+        color: #000;
+        z-index: 1;
+    }
+
     &__product {
         display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
     }
 
     &__product-image {
